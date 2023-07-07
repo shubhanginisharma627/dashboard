@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from './Header';
 import SideNavbar from './SideNavbar';
 import ReusableCard from './ReusableCard';
 import AgGridTable from './AgGridTable';
-
+import Header from './Header';
+import './App.css'
 const App = () => {
   const tableData1 = [
     { Name: 'Value 1', Budget: 'Value 2', Spend: 'Value 3', Forecast: 'Value 4' },
@@ -39,13 +39,15 @@ const App = () => {
   ];
   return (
     <div>
-      <Header />
       <div className="main-content">
         <SideNavbar />
         <div className="content">
+          <Header/>
+          <div className="cardDeck">
           <ReusableCard title="Card 1" />
           <ReusableCard title="Card 2" />
           <ReusableCard title="Card 3" />
+          </div>
           <AgGridTable tableData={tableData1} columnDefs={columnDefs1} button={false}  />
           <AgGridTable tableData={tableData2} columnDefs={columnDefs2} button={true}/>
           <AgGridTable tableData={tableData3} columnDefs={columnDefs3} button={false}/>

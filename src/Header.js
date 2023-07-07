@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header>
       <div className="header-left">
-        <h1>Your Website Name</h1>
+        <h1>s</h1>
       </div>
       <div className="header-right">
         <p>{currentDate}</p>
