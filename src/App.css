@@ -27,6 +27,9 @@ nav .list-container {
   flex: 1; /* Take up remaining vertical space */
   display: flex;
   flex-direction: column;
+  align-content: flex-start;
+    flex-wrap: wrap;
+    align-items: stretch;
 }
 
 nav .profile-icon{
@@ -115,11 +118,11 @@ header {
 
 /* You can add more CSS rules to further customize the styles */
 .Ag{
-  height: 250px;
+  height: 200px;
   border:1px solid black;
   margin-left:10%;
   margin-right:10%;
-  margin-bottom:3%;
+  margin-bottom:2%;
   border-radius:5px;
   padding:20px;
 }
@@ -135,4 +138,15 @@ header {
 }
 #green{
   background-color:#afe1af;
+}
+button{
+  background-color: white;
+  border:1px solid black;
+  padding:4px 15px;
+  border-radius:5px;
+  margin-left:5px;
+  margin-right:5px;
+}
+button: hover{
+  background-color: #babfc7;
 }
