@@ -6,10 +6,10 @@ const Header = () => {
   return (
     <header>
       <div className="header-left">
-        <h1>s</h1>
+        <h1>Hi, Jennie Moss</h1>
       </div>
       <div className="header-right">
-        <p>{currentDate}</p>
+        <p>Last scanned on {currentDate}</p>
       </div>
     </header>
   );

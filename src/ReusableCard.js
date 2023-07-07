@@ -1,10 +1,10 @@
 import React from 'react';
 
-const ReusableCard = ({ title }) => {
+const ReusableCard = ({ title,description }) => {
   return (
     <div className="card">
       <h3>{title}</h3>
-      {/* Add card content */}
+      <p>{description}</p>
     </div>
   );
 };

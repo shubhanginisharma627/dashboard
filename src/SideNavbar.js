@@ -11,15 +11,38 @@ const SideNavbar = () => {
               <ListItemIcon>
                 <HomeIcon />
               </ListItemIcon>
-              <ListItemText primary="Home" />
+
             </ListItem>
             <ListItem button>
               <ListItemIcon>
                 <WorkIcon />
               </ListItemIcon>
-              <ListItemText primary="Work" />
+            
             </ListItem>
-            {/* Add more menu items */}
+            <ListItem button>
+              <ListItemIcon>
+                <HomeIcon />
+              </ListItemIcon>
+
+            </ListItem>
+            <ListItem button>
+              <ListItemIcon>
+                <WorkIcon />
+              </ListItemIcon>
+            
+            </ListItem>
+            <ListItem button>
+              <ListItemIcon>
+                <HomeIcon />
+              </ListItemIcon>
+
+            </ListItem>
+            <ListItem button>
+              <ListItemIcon>
+                <WorkIcon />
+              </ListItemIcon>
+            
+            </ListItem>
           </List>
         </div>
         <div className="profile-icon">
