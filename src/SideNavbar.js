@@ -1,6 +1,6 @@
 import React from 'react';
-import { Avatar, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
-import { Person as PersonIcon, Home as HomeIcon, Work as WorkIcon } from '@material-ui/icons';
+import { Avatar, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
+import { Person as PersonIcon, Home as HomeIcon, Work as WorkIcon } from '@mui/icons-material';
 
 const SideNavbar = () => {
   return (
