@@ -2,40 +2,80 @@ import React from 'react';
 import SideNavbar from './SideNavbar';
 import ReusableCard from './ReusableCard';
 import AgGridTable from './AgGridTable';
+import Link from '@mui/material/Link';
 import Header from './Header';
 import './App.css'
+const ColCellRenderer = props => {
+     return (
+      <div className="table-buttons" >
+      <button>Approve</button>
+      <button>Reject</button>
+       </div>
+     )
+     };
 const App = () => {
   const tableData1 = [
-    { Name: 'Value 1', Budget: 'Value 2', Spend: 'Value 3', Forecast: 'Value 4' },
-    // Add more rows
+    { Name: 'ACME Corp', Budget: '$ 200,000', Spend: '$ 173,762', Forecast: '$ 205,049' },
+    { Name: 'Raman Inc', Budget: '$ 200,000', Spend: '$ 124,762', Forecast: '$ 292,629' }
   ];
 
   const tableData2 = [
-    { Bucket_Name: 'Data 1', Current_Budget: 'Data 2', Requested_Budget: 'Data 3', Requested_By: 'Data 4' },
+    { Bucket_Name: 'ACME Corp', Current_Budget: '$ 200,000', Requested_Budget: '$ 250,000', Requested_By: 'Joe Hilfinger'},
     // Add more rows
   ];
 
   const tableData3 = [
-    { Name: 'Info 1', Budget: 'Info 2', Spend: 'Info 3', Forecast: 'Info 4' },
+    { Name: 'Longate', Budget: '$ 200,000', Spend: '$ 173,762', Forecast: '$ 205,049' },
     // Add more rows
   ];
   const columnDefs1 = [
-    { headerName: 'Name', field: 'Name' },
-    { headerName: 'Budget', field: 'Budget' },
-    { headerName: 'Spend', field: 'Spend' },
-    { headerName: 'Forecast', field: 'Forecast' },
+    { headerName: 'Name', field: 'Name',
+    cellRenderer: (props)=>{
+       return(
+        <Link href="#" underline="none">
+       {props.value}
+      </Link>
+       )
+    },
+    suppressSizeToFit: true,
+     width:280 },
+    { headerName: 'Budget', field: 'Budget',suppressSizeToFit: true, width:280},
+    { headerName: 'Spend', field: 'Spend' ,suppressSizeToFit: true,width:280},
+    { headerName: 'Forecast', field: 'Forecast',suppressSizeToFit: true,width:280 },
   ];
   const columnDefs2 = [
-    { headerName: 'Bucket Name', field: 'Bucket_Name' },
-    { headerName: 'Current Budget', field: 'Current_Budget' },
-    { headerName: 'Requested Budget', field: 'Requested_Budget' },
-    { headerName: 'Requested By', field: 'Requested_By' },
+    { headerName: 'Bucket Name', field: 'Bucket_Name', cellRenderer: (props)=>{
+      return(
+       <Link href="#" underline="none">
+      {props.value}
+     </Link>
+      )
+   },
+   suppressSizeToFit: true, width:200 },
+    { headerName: 'Current Budget', field: 'Current_Budget',suppressSizeToFit: true, width:200 },
+    { headerName: 'Requested Budget', field: 'Requested_Budget',suppressSizeToFit: true, width:200 },
+    { headerName: 'Requested By', field: 'Requested_By', cellRenderer: (props)=>{
+      return(
+       <Link href="#" underline="none">
+      {props.value}
+     </Link>
+      )
+   } ,
+   suppressSizeToFit: true, width:200},
+    { headerName: '  ', field: 'button',cellRenderer: ColCellRenderer ,suppressSizeToFit: true, width:200},
   ];
   const columnDefs3 = [
-    { headerName: 'Name', field: 'Name' },
-    { headerName: 'Budget', field: 'Budget' },
-    { headerName: 'Spend', field: 'Spend' },
-    { headerName: 'Forecast', field: 'Forecast' },
+    { headerName: 'Name', field: 'Name', cellRenderer: (props)=>{
+      return(
+       <Link href="#" underline="none">
+      {props.value}
+     </Link>
+      )
+   } ,
+   suppressSizeToFit: true, width:280},
+    { headerName: 'Budget', field: 'Budget',suppressSizeToFit: true, width:280 },
+    { headerName: 'Spend', field: 'Spend',suppressSizeToFit: true, width:280 },
+    { headerName: 'Forecast', field: 'Forecast',suppressSizeToFit: true, width:280 },
   ];
   return (
     <div>
@@ -48,9 +88,9 @@ const App = () => {
           <ReusableCard title="$ 299,762" description="Spent month-to-date" idname="blue"/>
           <ReusableCard title="$ 2,874,582" description="Forecasted till month end" idname="green" />
           </div>
-          <AgGridTable tableData={tableData1} columnDefs={columnDefs1} button={false} title={"Buckets you own"} />
-          <AgGridTable tableData={tableData2} columnDefs={columnDefs2} button={true} title={"Approvals assigned to you"}/>
-          <AgGridTable tableData={tableData3} columnDefs={columnDefs3} button={false} title={"Buckets you are member of "}/>
+          <AgGridTable tableData={tableData1} columnDefs={columnDefs1}  title={"Buckets you own"} />
+          <AgGridTable tableData={tableData2} columnDefs={columnDefs2}  title={"Approvals assigned to you"}/>
+          <AgGridTable tableData={tableData3} columnDefs={columnDefs3}  title={"Buckets you are member of "}/>
         </div>
       </div>
     </div>

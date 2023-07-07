@@ -59,9 +59,16 @@ nav .profile-icon{
 /* Ag-Grid table container */
 .ag-theme-alpine {
   margin-bottom: 20px;
-
+  --ag-header-background-color: none;
+  --ag-odd-row-background-color:none;
+  --ag-row-border-style:none;
 }
-
+.ag-theme-alpine .ag-root-wrapper  {
+  border: none;
+}
+.ag-header-row{
+  border-block-start: 1px solid #babfc7;
+}
 /* Table buttons */
 .table-buttons {
   display: flex;

@@ -3,16 +3,8 @@ import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/styles//ag-grid.css';
 import 'ag-grid-community/styles//ag-theme-alpine.css';
 import { Paper } from '@mui/material';
-const AgGridTable = ({ tableData,columnDefs,button,title }) => {
+const AgGridTable = ({ tableData,columnDefs,title }) => {
   
-
-  const onApproveClick = () => {
-    // Handle approve button click
-  };
-
-  const onRejectClick = () => {
-    // Handle reject button click
-  };
 
   return (
     <div className="Ag" >
@@ -21,12 +13,7 @@ const AgGridTable = ({ tableData,columnDefs,button,title }) => {
       <AgGridReact
         columnDefs={columnDefs}
         rowData={tableData}
-      />{
-        button && <div className="table-buttons" >
-        <button onClick={onApproveClick}>Approve</button>
-        <button onClick={onRejectClick}>Reject</button>
-      </div>
-      }
+      />
     </div>
 </div>
   );
