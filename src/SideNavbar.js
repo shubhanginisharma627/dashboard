@@ -47,7 +47,7 @@ const SideNavbar = () => {
         </div>
         <div className="profile-icon">
           <Avatar>
-            <PersonIcon />
+            DK
           </Avatar>
         </div>
       </nav>

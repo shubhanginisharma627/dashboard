@@ -14,9 +14,8 @@
 
 /* SideNavbar */
 nav {
-  background-color: #f2f2f2;
+  background-color:#add8e6;
   width:4rem;
-  height: 150vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -30,7 +29,10 @@ nav .list-container {
   flex-direction: column;
 }
 
-
+nav .profile-icon{
+  padding-bottom: 20px;
+  margin-left: 0.5rem;
+}
 /* Cards */
 .cardDeck{
      display: flex;
@@ -51,6 +53,7 @@ nav .list-container {
     margin-top: 10px;
   padding: 15px;
   border-radius:7px;
+  border:1px solid grey;
 }
 
 /* Ag-Grid table container */
@@ -111,7 +114,18 @@ header {
   margin-right:10%;
   margin-bottom:3%;
   border-radius:5px;
+  padding:20px;
 }
 .Ag h3{
    margin-left:1rem;
+
+}
+#white{
+  background-color:white;
+}
+#blue{
+  background-color:#add8e6;
+}
+#green{
+  background-color:#afe1af;
 }

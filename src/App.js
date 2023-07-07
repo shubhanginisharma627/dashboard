@@ -44,9 +44,9 @@ const App = () => {
         <div className="content">
           <Header/>
           <div className="cardDeck">
-          <ReusableCard title="$ 400,000" description="Total budget you own" />
-          <ReusableCard title="$ 299,762" description="Spent month-to-date" />
-          <ReusableCard title="$ 2,874,582" description="Forecasted till month end" />
+          <ReusableCard title="$ 400,000" description="Total budget you own" idname="white" />
+          <ReusableCard title="$ 299,762" description="Spent month-to-date" idname="blue"/>
+          <ReusableCard title="$ 2,874,582" description="Forecasted till month end" idname="green" />
           </div>
           <AgGridTable tableData={tableData1} columnDefs={columnDefs1} button={false} title={"Buckets you own"} />
           <AgGridTable tableData={tableData2} columnDefs={columnDefs2} button={true} title={"Approvals assigned to you"}/>
