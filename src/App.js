@@ -52,8 +52,8 @@ const App = () => {
       )
    },
    suppressSizeToFit: true, width:200 },
-    { headerName: 'Current Budget', field: 'Current_Budget',suppressSizeToFit: true, width:200 },
-    { headerName: 'Requested Budget', field: 'Requested_Budget',suppressSizeToFit: true, width:200 },
+    { headerName: 'Current Budget', field: 'Current_Budget',suppressSizeToFit: true, width:180 },
+    { headerName: 'Requested Budget', field: 'Requested_Budget',suppressSizeToFit: true, width:180 },
     { headerName: 'Requested By', field: 'Requested_By', cellRenderer: (props)=>{
       return(
        <Link href="#" underline="none">
@@ -61,8 +61,8 @@ const App = () => {
      </Link>
       )
    } ,
-   suppressSizeToFit: true, width:200},
-    { headerName: '  ', field: 'button',cellRenderer: ColCellRenderer ,suppressSizeToFit: true, width:200},
+   suppressSizeToFit: true, width:180},
+    { headerName: '  ', field: 'button',cellRenderer: ColCellRenderer ,suppressSizeToFit: true, width:180},
   ];
   const columnDefs3 = [
     { headerName: 'Name', field: 'Name', cellRenderer: (props)=>{
